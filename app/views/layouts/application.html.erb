@@ -11,8 +11,12 @@
 
   <body>
     <p>
+    <% user = User.find_by({"id"=> session["user_id"]})%>
+    Hey, <%= user["first_name"] %>% 
+    
+    <% else %>
       <a href="/sessions/new"> Login </a>
-      
+
       <a href="/users/new">Sign Up</a>
     </p>
 
